@@ -39,13 +39,13 @@ const Header = () => {
   return (
     <div className='flex items-center justify-between p-5'>
         <div className='flex items-center gap-8 '>
-        <img src={Logo} className=' w-[80px] md:w-[150px] object-cover mr-32' />
-        <div className='hidden md:flex gap-8'>
+        <img src={Logo} className=' w-[80px] md:w-[150px] object-cover ' />
+        <div className='hidden md:flex gap-8 ml-20'>
         {menu.map((item)=>{
-            return <HeaderItem name={item.name} Icon={item.icon} />
+            return <HeaderItem name={item.name} Icon={item.icon}/>
         })}
         </div>
-        <div className='flex md:hidden gap-5'>
+        <div className='flex md:hidden gap-8'>
         {menu.map((item, i)=> i<3 &&
              ( <HeaderItem name={''} Icon={item.icon} />)
         )}
